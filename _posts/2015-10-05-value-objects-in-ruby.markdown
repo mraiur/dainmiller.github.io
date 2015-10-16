@@ -1,12 +1,10 @@
 ---
 published: true
-title: The Tenants of Value Objects
+title: Value Objects
 layout: post
-tags: [ruby,patterns]
+tags: [ruby, patterns]
 categories: [ruby]
-summary: A value object never changes the state of your application. 
 ---
-
 Tenants of value objects:
 
 1. A value object never changes the state of your application
