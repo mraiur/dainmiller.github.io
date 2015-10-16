@@ -20,7 +20,6 @@ unstructured data. In Postgres this is the <code>jsonb</code> type under the hoo
 ```
  defmodule MyApp.Repo.Migrations.CreateAccount do
 use Ecto.Migration&#x000A;&#x000A; 
-
  def change do
   alter table(:accounts) do&#x000A;      add :name, :string&#x000A;      add :settings, :map&#x000A;    end&#x000A;  end&#x000A;end&#x000A;
 ```
