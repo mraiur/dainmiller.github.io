@@ -1,9 +1,9 @@
 ---
 published: true
-title: Value Objects in Ruby
+title: Coupling & Cohesions by Example
 layout: post
 tags: [ruby]
-categories: [ruby, patterns]
+categories: [ruby patterns]
 summary: We run a youtube production company and we make videos for paying members. 
 
 ---
