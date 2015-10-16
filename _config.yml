@@ -1,10 +1,10 @@
 excerpt_separator: ""
 pygments: true
 markdown: kramdown
-url: http://CDainMiller.github.io
-title: Dain's Devlog
-email: 
+url: http://cdainmiller.github.io
+title: Dain's Brain
+email: miller.dain@gmail.com
 author: Dain Miller
-description: My awesome new site
+description: Robotic intentions
 paginate: 3
 google_analytics: 
