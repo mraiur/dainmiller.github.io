@@ -3,7 +3,7 @@ published: true
 title: Value Objects in Ruby
 layout: post
 tags: [ruby]
-categories: [ruby]
+categories: [ruby, patterns]
 summary: We run a youtube production company and we make videos for paying members. 
 
 ---
