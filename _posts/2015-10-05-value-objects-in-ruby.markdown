@@ -1,8 +1,8 @@
 ---
 published: true
-title: Value Objects in Ruby
+title: The Tenants of Value Objects
 layout: post
-tags: [ruby]
+tags: [ruby,patterns]
 categories: [ruby]
 summary: A value object never changes the state of your application. 
 ---

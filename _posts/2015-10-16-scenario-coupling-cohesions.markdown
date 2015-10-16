@@ -1,8 +1,8 @@
 ---
 published: true
-title: Coupling & Cohesions
+title: Coupling & Cohesion
 layout: post
-tags: [ruby,patterns]
+tags: [ruby]
 categories: [ruby]
 summary: We run a youtube production company and we make videos for paying members. 
 
