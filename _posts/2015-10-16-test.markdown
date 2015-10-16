@@ -1,0 +1,6 @@
+---
+published: true
+title: Test
+layout: post
+---
+<img src="http://i.imgur.com/WukA0sV.gifv" />
