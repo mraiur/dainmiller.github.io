@@ -1,8 +1,8 @@
 ---
 published: true
-title: Validating JSON APIs
+title: Testing JSON APIs
 layout: post
 tags: [json,rspec]
-summary: API schema testing using ```json_matchers```.
+summary: Testing JSON schema using RSpec's ```json_matchers```.
 ---
 test
