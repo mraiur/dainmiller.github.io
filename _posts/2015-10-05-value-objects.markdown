@@ -33,9 +33,9 @@ Others allow you to query data in a more advanced fashion.
 module Utilities
   class ClientIds
     ACTIVE = {
-      alpha: "f3de73ad8dbf6842814c5839490ae3ff",
-      beta: "711d9c80d73d4be3d3ed58af6135555e",
-      production_1: "f35b4c68254c7ea329c7b2558353b31e"
+      alpha: "id1",
+      beta: "id2",
+      production_1: "id3"
     }
     INACTIVE = {}
 
