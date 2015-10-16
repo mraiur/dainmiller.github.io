@@ -8,7 +8,9 @@ summary: A value object never changes the state of your application.
 ---
 
 Tenants of value objects:
+
 1. A value object never changes the state of your application
+
 2. A value object presents data and allows you to pose questions to the data
 
 Some only provide the data, and convenient lookups
