@@ -1,8 +1,11 @@
 ---
 published: true
-title: Scenario: Coupling & Cohesions 
+title: Value Objects in Ruby
 layout: post
+tags: [ruby]
+categories: [ruby]
 ---
+
 Scenario:
 
 We run a youtube production company and we make videos for paying members.
