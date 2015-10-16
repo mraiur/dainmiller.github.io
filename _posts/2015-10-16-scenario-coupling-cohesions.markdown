@@ -2,7 +2,7 @@
 published: true
 title: Coupling & Cohesions
 layout: post
-tags: [ruby, patterns]
+tags: [ruby patterns]
 categories: [ruby]
 summary: We run a youtube production company and we make videos for paying members. 
 
