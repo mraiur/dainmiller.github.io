@@ -17,9 +17,9 @@ our Ecto models.</p>
 you are embedding into must have a database field using the <code>:map</code> type for
 unstructured data. In Postgres this is the <code>jsonb</code> type under the hood.</p>
 
-{% highlight ruby %}
- defmodule MyApp.Repo.Migrations.CreateAccount do&#x000A;  use Ecto.Migration&#x000A;&#x000A;  def change do&#x000A;    alter table(:accounts) do&#x000A;      add :name, :string&#x000A;      add :settings, :map&#x000A;    end&#x000A;  end&#x000A;end&#x000A;
-{% endhighlight %}
+```
+ def MyApp.Repo.Migrations.CreateAccount do&#x000A;  use Ecto.Migration&#x000A;&#x000A;  def change do&#x000A;    alter table(:accounts) do&#x000A;      add :name, :string&#x000A;      add :settings, :map&#x000A;    end&#x000A;  end&#x000A;end&#x000A;
+```
 
 <p>Now you can define the model you are embedding into:</p>
 
