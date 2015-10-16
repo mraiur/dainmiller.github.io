@@ -12,10 +12,10 @@ layout: default
           <h3 class="h2 post-title">{{ post.title }}</h3>
           <p class="post-summary" style="color: #5c5e6a;font-size: 17px;font-size: 1.2rem;margin-top: 23px;">{{ post.summary }}</p>
           
-          <ul class="meta-tag-list">
+          <ul class="meta-tag-list" style="float: left;margin-top: -17px;">
             {% for tag in post.tags %}
               <li class="meta-tag-item">
-                <a href="#">{{ tag }}</a>
+                <a href="#" style="font-size: 15px;font-weight: 300;">{{ tag }}</a>
               </li>
             {% endfor %}
           </ul>
