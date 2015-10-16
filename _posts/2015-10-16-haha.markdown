@@ -1,6 +1,6 @@
 ---
 published: true
-title: haha
+title: Using Elixir Models in Ecto.parse
 layout: post
 ---
 <p>Postgres can store unstructured data such as <a href="http://www.postgresql.org/docs/9.4/static/arrays.html">arrays</a>, <a href="http://www.postgresql.org/docs/9.4/static/datatype-json.html">json</a>, and <a href="http://www.postgresql.org/docs/9.4/static/datatype-json.html">jsonb</a>
