@@ -9,7 +9,7 @@ Tenants of value objects:
 
 Some only provide the data, and convenient lookups
 
-```
+{% highlight ruby %}
 module Utilities
   class Sort
     ASC = "ASC" 
@@ -20,7 +20,7 @@ module Utilities
     }
   end
 end
-```
+{% endhighlight %}
 
 ```
 module Utilities
