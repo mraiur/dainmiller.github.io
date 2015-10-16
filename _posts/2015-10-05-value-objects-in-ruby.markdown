@@ -1,9 +1,10 @@
 ---
 published: true
-title: Value Objects
+title: The Tenants of Value Objects
 layout: post
 tags: [ruby, patterns]
 categories: [ruby]
+summary: How to use and work with a core OO paradigm.
 ---
 Tenants of value objects:
 
