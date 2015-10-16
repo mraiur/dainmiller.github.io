@@ -21,19 +21,37 @@
 </head>
 
 <body>
-  <div class="site-wrap">
-    <header class="site-header px2 px-responsive">
-      <div class="mt2 wrap">
-        <div class="measure">
-          <a href="{{ site.url }}" class="left">{{ site.title }}</a>
-          <nav class="site-nav right">
-            {% include navigation.html %}
-          </nav>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-    </header>
+    
+<section class='container'>
+<section id='posts'>
+<header class='blog-header' role='banner'>
+<a class="logo" href="/"></a>
+<h1 class='blog-title'>
+Giant Robots Smashing into Other Giant Robots
+</h1>
+<h2 class='blog-author'>
+Written by
+<a href="http://thoughtbot.com">thoughtbot</a>
+</h2>
+</header>
 
+<section class='etc email-container'>
+<div class='email-container'>
+<form action='https://formkeep.com/f/a3b405815c39' method='POST'>
+<fieldset>
+<legend class='offscreen'>
+Sign up to receive a weekly recap from GIANT ROBOTS
+</legend>
+<input name='utf8' type='hidden' value='✓'>
+<input aria-label='Your email address' class='newsletter-email-input' name='email' placeholder='Your email address' required type='email'>
+<input class='newsletter-submit-button' type='submit' value='Get GIANT ROBOTS weekly'>
+</fieldset>
+</form>
+</div>
+
+</section>
+
+  <div class="site-wrap">
     <div class="post p2 p-responsive wrap" role="main">
       <div class="measure">
         {{ content }}
