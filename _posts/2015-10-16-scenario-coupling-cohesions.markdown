@@ -1,9 +1,9 @@
 ---
 published: true
-title: Coupling & Cohesions by Example
+title: Coupling & Cohesions
 layout: post
-tags: [ruby]
-categories: [ruby patterns]
+tags: [ruby, patterns]
+categories: [ruby]
 summary: We run a youtube production company and we make videos for paying members. 
 
 ---
