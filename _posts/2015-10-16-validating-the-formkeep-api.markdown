@@ -3,7 +3,7 @@ published: true
 title: Validating the FormKeep API
 layout: post
 ---
-In order to verify that GET `/api/forms` serves JSON in the format our client expects, we’ll assert that it successfully validates against a particular JSON schema:
+In order to verify that GET /api/forms serves JSON in the format our client expects, we’ll assert that it successfully validates against a particular JSON schema:
 
 ```
 
