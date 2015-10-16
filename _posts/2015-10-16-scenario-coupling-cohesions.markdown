@@ -4,7 +4,7 @@ title: Value Objects in Ruby
 layout: post
 tags: [ruby]
 categories: [ruby]
-summary: We run a youtube production company and we make videos for paying members. Paying members can likewise access paid for premium content, and guests can access free content.
+summary: We run a youtube production company and we make videos for paying members. 
 
 ---
 

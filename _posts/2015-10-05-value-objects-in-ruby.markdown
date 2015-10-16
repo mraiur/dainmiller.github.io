@@ -4,7 +4,7 @@ title: Value Objects in Ruby
 layout: post
 tags: [ruby]
 categories: [ruby]
-summary: A value object never changes the state of your application. A value object presents data and allows you to pose questions to the data.
+summary: A value object never changes the state of your application. 
 ---
 
 Tenants of value objects:
