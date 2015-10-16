@@ -9,7 +9,8 @@ Tenants of value objects:
 
 Some only provide the data, and convenient lookups
 
-```module Utilities
+```
+module Utilities
   class Sort
     ASC = "ASC" 
     DESC = "DESC"
@@ -18,7 +19,8 @@ Some only provide the data, and convenient lookups
       descending: DESC
     }
   end
-end```
+end
+```
 
 ```
 module Utilities
