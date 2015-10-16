@@ -1,6 +1,6 @@
 ---
 published: true
-title: Testing JSON APIs with json_matchers
+title: Testing JSON APIs
 layout: post
 ---
 test
