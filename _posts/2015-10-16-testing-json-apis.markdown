@@ -1,6 +1,6 @@
 ---
 published: true
-title: Testing JSON APIs
+title: RSpec Testing of JSON APIs
 layout: post
 tags: [json,rspec]
 summary: TDD API development using [json_matchers](https://github.com/thoughtbot/json_matchers)
