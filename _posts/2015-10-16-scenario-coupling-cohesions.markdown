@@ -4,6 +4,7 @@ title: Authorization Objects
 layout: post
 tags: [ruby]
 categories: [ruby]
+summary: Don't allow permissions to mix with app state.
 ---
 Scenario:
 We run a youtube production company and we make videos for paying members.
