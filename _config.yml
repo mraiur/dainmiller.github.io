@@ -1,0 +1,10 @@
+excerpt_separator: ""
+pygments: true
+markdown: kramdown
+url: http://CDainMiller.github.io
+title: Dain's Devlog
+email: 
+author: Dain Miller
+description: My awesome new site
+paginate: 3
+google_analytics: 
