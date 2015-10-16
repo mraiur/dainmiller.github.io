@@ -1,6 +1,6 @@
 ---
 published: true
-title: The Tenants of Value Objects
+title: Value Object Tenants
 layout: post
 tags: [ruby, patterns]
 categories: [ruby]
