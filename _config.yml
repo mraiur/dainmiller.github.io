@@ -2,9 +2,9 @@ excerpt_separator: ""
 pygments: true
 markdown: kramdown
 url: http://cdainmiller.github.io
-title: Dain's Brain
+title: Ctrl-Dev
 email: miller.dain@gmail.com
 author: Dain Miller
-description: Robotic intentions
+description: Ctrl-Dev
 paginate: 3
 google_analytics: 
