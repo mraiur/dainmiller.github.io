@@ -1,30 +1,25 @@
 ---
 published: true
-title: Coupling & Cohesion
+title: Authorization Objects
 layout: post
 tags: [ruby]
 categories: [ruby]
-summary: We run a youtube production company and we make videos for paying members. 
-
 ---
-
 Scenario:
-
 We run a youtube production company and we make videos for paying members.
 Paying members can likewise access paid for premium content, and guests can access free content.
 Pretty straight forward.
 
-Next Scenario:
+Occurrence:
 We decide, one day, to open source all of our content. All videos, text posts, tutorials, etc
 are now available to *all* users.
 
-What's the most optimal way to be able to ship such a feature, with all tests passing.
+What's the most optimal way to be able to ship such a feature, with all tests passing?
 
 Well, an AuthorizationObject isn't the worst way to go.
 Here's an example of how we might use one here.
 
 Example controller
-
 {% highlight ruby %}
 class SessionsController < Devise::SessionsController
   before_filter :set_auth_object
@@ -61,11 +56,9 @@ class Authorizer
   def admin?
     @user.admin
   end
-{% endhighlight %}
 
-Here we are choosing rudimentary booleans just as an example.
 
-{% highlight ruby %}
+  # Here we are choosing rudimentary booleans just as an example.
   def has_access_to_content?
     # Examples ideas on random ways a user could have access
     if @user.admin || @user.has_purchased
