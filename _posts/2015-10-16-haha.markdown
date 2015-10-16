@@ -3,4 +3,76 @@ published: true
 title: haha
 layout: post
 ---
-haha
+<p>Postgres can store unstructured data such as <a href="http://www.postgresql.org/docs/9.4/static/arrays.html">arrays</a>, <a href="http://www.postgresql.org/docs/9.4/static/datatype-json.html">json</a>, and <a href="http://www.postgresql.org/docs/9.4/static/datatype-json.html">jsonb</a>
+as of version 9.4. Ecto, Elixir&rsquo;s database wrapper, provides first class support
+for serializing and deserializing Ecto structs and arrays into these native data
+types without sacrificing the expressiveness of Ecto models. Embedded records
+have all the things regular models have, such as structured fields, lifecycle
+callbacks, and changesets. Let&rsquo;s look at how easy it is to embed structs into
+our Ecto models.</p>
+
+<h2 id="embedding-a-single-struct-with-embeds_one">Embedding a single struct with <code>embeds_one</code></h2>
+
+<p>You can use <a href="http://hexdocs.pm/ecto/Ecto.Schema.html#embeds_one/3"><code>embeds_one</code></a> to embed a single struct in an Ecto model. The record
+you are embedding into must have a database field using the <code>:map</code> type for
+unstructured data. In Postgres this is the <code>jsonb</code> type under the hood.</p>
+
+<pre><code class="elixir">defmodule MyApp.Repo.Migrations.CreateAccount do&#x000A;  use Ecto.Migration&#x000A;&#x000A;  def change do&#x000A;    alter table(:accounts) do&#x000A;      add :name, :string&#x000A;      add :settings, :map&#x000A;    end&#x000A;  end&#x000A;end&#x000A;</code></pre>
+
+<p>Now you can define the model you are embedding into:</p>
+
+<pre><code class="elixir">defmodule Account do&#x000A;  use Ecto.Model&#x000A;  schema &quot;accounts&quot; do&#x000A;    field :name&#x000A;    embeds_one :settings, Settings&#x000A;  end&#x000A;end&#x000A;</code></pre>
+
+<p>And now, the define the record you have embedded in <code>Account</code>:</p>
+
+<pre><code class="elixir">defmodule Settings do&#x000A;  use Ecto.Model&#x000A;&#x000A;  # embedded_schema is short for:&#x000A;  #&#x000A;  #   @primary_key {:id, :binary_id, autogenerate: true}&#x000A;  #   schema &quot;embedded Item&quot; do&#x000A;  #&#x000A;  embedded_schema do&#x000A;    field :email_signature&#x000A;    field :send_emails, :boolean&#x000A;  end&#x000A;end&#x000A;</code></pre>
+
+<p>Embedded records behave like typical associations, except setting and
+deleting embeds can <em>only</em> be done via changesets.</p>
+
+<pre><code class="elixir">account = Repo.get!(Account, 20)&#x000A;settings = %Settings{email_signature: &quot;Josh Steiner&quot;, send_emails: true}&#x000A;&#x000A;# You may want to move this to the model layer.&#x000A;# This is done here for ease of demonstration.&#x000A;changeset = Ecto.Changeset.change(account)&#x000A;changeset = Ecto.Changeset.put_change(account, :settings, settings)&#x000A;&#x000A;Repo.update!(changeset)&#x000A;</code></pre>
+
+<p>This will automatically call the function <code>changeset/2</code> in the embedded model
+(in this case, <code>Settings</code>) when saving the parent record.  This means embedded
+records automatically go through validations! You can modify the function that
+is called by passing the <a href="http://hexdocs.pm/ecto/Ecto.Schema.html#embeds_one/3"><code>:on_cast</code></a> option to <code>embeds_one</code>.</p>
+
+<p>Embedded records are conveniently loaded with the parent record, so you don&rsquo;t
+have to worry about joins or preloading:</p>
+
+<pre><code class="elixir">account = Repo.get!(Account, 20)&#x000A;account.settings #=&gt; %Settings{...}&#x000A;</code></pre>
+
+<h2 id="embedding-multiple-structs-with-embeds_many">Embedding multiple structs with <code>embeds_many</code></h2>
+
+<p><a href="http://hexdocs.pm/ecto/Ecto.Schema.html#embeds_many/3"><code>embeds_many</code></a> behaves similarly to <code>embeds_one</code>, but allows you to store an
+array of Ecto structs. Under the hood, Postgres uses a combination of <code>array</code>
+columns with <code>jsonb</code> elements.</p>
+
+<pre><code class="elixir">defmodule MyApp.Repo.Migrations.CreatePeople do&#x000A;  use Ecto.Migration&#x000A;&#x000A;  def change do&#x000A;    alter table(:people) do&#x000A;      add :name, :string&#x000A;&#x000A;      # It is recommended to set the default value to an empty array.&#x000A;      add :addresses, {:array, :map}, default: []&#x000A;    end&#x000A;  end&#x000A;end&#x000A;</code></pre>
+
+<p>Now you can define your models:</p>
+
+<pre><code class="elixir">defmodule Person do&#x000A;  use Ecto.Model&#x000A;&#x000A;  schema &quot;people&quot; do&#x000A;    field :name&#x000A;    embeds_many :addresses, Address&#x000A;  end&#x000A;end&#x000A;&#x000A;defmodule Address do&#x000A;  use Ecto.Model&#x000A;&#x000A;  embedded_schema do&#x000A;    field :street_name&#x000A;    field :city&#x000A;    field :state&#x000A;    field :zip_code&#x000A;  end&#x000A;end&#x000A;</code></pre>
+
+<p>Setting many to many fields is done with an <code>array</code>:</p>
+
+<pre><code class="elixir">person = Repo.get!(Person, 7)&#x000A;addresses = [&#x000A;  %Address{street_name: &quot;20 Foobar Street&quot;, city: &quot;Boston&quot;, state: &quot;MA&quot;, zip_code: &quot;02111&quot;},&#x000A;  %Address{street_name: &quot;1 Finite Loop&quot;, city: &quot;Cupertino&quot;, state: &quot;CA&quot;, %zip_code: &quot;95014&quot;},&#x000A;]&#x000A;&#x000A;changeset = Ecto.Changeset.change(person)&#x000A;changeset = Ecto.Changeset.put_change(person, :addresses, addresses)&#x000A;&#x000A;Repo.update!(changeset)&#x000A;</code></pre>
+
+<p>You can now access these like a <code>has_many</code>:</p>
+
+<pre><code class="elixir">person = Repo.get!(Person, 5)&#x000A;person.addresses #=&gt; [%Address{...}, %Address{...}]&#x000A;</code></pre>
+
+<h2 id="trade-offs">Trade-Offs</h2>
+
+<p>As you&rsquo;ve seen, embedding records is simple and comes with many of the powerful
+features of Ecto. It&rsquo;s even easy to add fields to an embedded record without
+running migrations. These are some nice benefits, however they come with serious
+trade-offs worth considering.</p>
+
+<p>When you use unstructured data, you lose some of the powerful relational
+features that a SQL database provides. For example, since a record can only be
+embedded in a single parent, you can&rsquo;t model a many-to-many relationship with
+embedded records. You also can&rsquo;t use database constraints on structure and
+uniqueness when storing in a JSON field. While you can add these constraints to
+your application code, it&rsquo;s usually best to validate at the database level to
+ensure data integrity.</p>
