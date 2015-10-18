@@ -29,7 +29,6 @@ Example controller
 
 {% highlight ruby %}
 class SessionsController < Devise::SessionsController
-  before_filter :set_auth_object
 
   # Login example.
   # Do normal login, then goto route based on access level.
