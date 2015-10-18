@@ -66,6 +66,5 @@ end
 
 As you can see in the above example here we aren't only providing the data in a nice wrapped up 
 abstraction, we are also allowing objects outside of this class to ask questions of this data. 
-into
-This is where we get the real power in value objects. As system complexity grows, this can really reduce a lot
+This is where we get the real power of value objects. As system complexity grows, this can reduce a lot
 of cognitive overhead. You shouldn't ever have to think "Oh shoot, what is this string representing".
