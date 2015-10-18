@@ -8,7 +8,7 @@ summary: How to use and work with a core OO paradigm.
 ---
 
 Value objects are super interesting. To me, a value object is something we can use
-to either wrap up values or ask questions on objects - though sometimes that is confused with
+to either wrap up data or ask questions of data - though sometimes that is confused with
 a "Query Object". In my mind they are almost interchangable. 
 
 My tenants of value objects:
