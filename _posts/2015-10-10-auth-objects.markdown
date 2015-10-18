@@ -30,8 +30,6 @@ Example controller
 {% highlight ruby %}
 class SessionsController < Devise::SessionsController
 
-  # Login example.
-  # Do normal login, then goto route based on access level.
   def new
     super
     redirect_to super_secret_admin_url if @authorizer.admin?
@@ -40,19 +38,16 @@ class SessionsController < Devise::SessionsController
   end
 
   private
-  # Create our auth object to ask it questions about the users permissions.
-  # Notice we are saving a few conditional `current_user` checks by using a 
-  # psudo monad `MaybeUser`
   def authorizer
     @_authorizer ||= Authorizer.new(MaybeUser.new(current_user))
   end
 end
 {% endhighlight %}
 
-Pretty basic override controller here. The one cool thing we are doing is with regard to that
-auth object you see. First, we are memoizing it, and we are initiailizing an instance of Authorizer
-passing in the `current_user`. But, because the `current_user` could be `nil`, we pass in a monad that will
-return a non-nil result and know how to handle a null user. Some people would have passed in a "Null Object",
+Pretty basic login override controller here. The one cool thing we are doing is with regard to that
+`Authorizer` class you see. First, we are memoizing it, and then we are initiailizing an instance of `Authorizer`
+passing in the `current_user`. But, because the `current_user` could be null, we pass in a monad that will
+return a non-null result and know how to handle a null user. Some people would have passed in a "Null Object",
 but I'm more of a fan of the `MaybeUser` haskell-esque naming paradigm.
 
 Here's how an example implementation of the auth object.
