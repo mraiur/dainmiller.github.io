@@ -50,7 +50,7 @@ passing in the `current_user`. But, because the `current_user` could be null, we
 return a non-null result and know how to handle a null user. Some people would have passed in a "Null Object",
 but I'm more of a fan of the `MaybeUser` haskell-esque naming paradigm.
 
-Here's how an example implementation of the auth object.
+Here's how the `Authorizer` class might look.
 
 {% highlight ruby %}
 class Authorizer
