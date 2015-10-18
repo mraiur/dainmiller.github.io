@@ -51,9 +51,9 @@ end
 
 Pretty basic override controller here. The one cool thing we are doing is with regard to that
 auth object you see. First, we are memoizing it, and we are initiailizing an instance of Authorizer
-passing in the current_user. But, because the current_user could be nil, we pass in a monad that will
-return a non-nil result and know how to handle a NullUser. Some people would have passed in a NullUser,
-but I'm more of a fan of the MaybeUser haskall-esque expression.
+passing in the `current_user`. But, because the `current_user` could be `nil`, we pass in a monad that will
+return a non-nil result and know how to handle a null user. Some people would have passed in a "Null Object",
+but I'm more of a fan of the `MaybeUser` haskell-esque naming paradigm.
 
 Here's how an example implementation of the auth object.
 
