@@ -10,10 +10,8 @@ summary: How to use and work with a core OO paradigm.
 Value objects are super interesting. To me, a value object is something we can use
 to either wrap up data or ask questions of data.
 
-### Value Object Tenants
-
-A value object never changes the state of your application
-A value object presents data and allows you to ask questions of the data
+The tenants might be: a value object never changes the state of your application, and 
+a value object presents data and allows you to ask questions of the data.
 
 Here's an example of what a few might look like.
 
@@ -71,6 +69,6 @@ end
 
 As you can see in the above example here we aren't only providing the data in a nice wrapped up 
 abstraction, we are also allowing objects outside of this class to ask questions of this data. 
-
+into
 This is where we get the real power in value objects. As system complexity grows, this can really reduce a lot
 of cognitive overhead. You shouldn't ever have to think "Oh shoot, what is this string representing".
