@@ -12,12 +12,10 @@ to either wrap up data or ask questions of data.
 
 ### Value Object Tenants
 
-- A value object never changes the state of your application
-- A value object presents data and allows you to ask questions of the data
-
+A value object never changes the state of your application
+A value object presents data and allows you to ask questions of the data
 
 Here's an example of what a few might look like.
-
 
 {% highlight ruby %}
 module Utilities
