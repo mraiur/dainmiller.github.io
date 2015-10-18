@@ -8,15 +8,16 @@ summary: How to use and work with a core OO paradigm.
 ---
 
 Value objects are super interesting. To me, a value object is something we can use
-to either wrap up data or ask questions of data - though sometimes that is confused with
-a "Query Object". In my mind they are almost interchangable. 
+to either wrap up data or ask questions of data.
 
-My tenants of value objects:
+### Value Object Tenants
 
-1. A value object never changes the state of your application
-2. A value object presents data and allows you to ask questions of the data
+- A value object never changes the state of your application
+- A value object presents data and allows you to ask questions of the data
+
 
 Here's an example of what a few might look like.
+
 
 {% highlight ruby %}
 module Utilities
