@@ -57,7 +57,7 @@ module Utilities
     INACTIVE = {}
 
     def self.active? client_id
-      ACTIVE.any? { |id| client_id == id }
+      ACTIVE.values.any? { |id| client_id == id }
     end
   end
 end
