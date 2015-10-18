@@ -74,13 +74,13 @@ class Authorizer
   # makes it so we can use expressive methods like @authorizer.not_accessible
   # or @authorizer.has_no_permissions? as you see above, and it'll always return false.
   def method_missing
-    return false
+    false
   end
 end
 {% endhighlight %}
 
-Notice how straight forward that was. We are basically doing nothing fancy, but we still are wrapping
-user query methods into what is essentially a "query object". This will become very helpful later.
+Notice how straight forward that was. We are doing no fancy tricks, but we still are wrapping
+user query methods in what is essentially a "query object". This will become very obviously helpful in a minute.
 
 *Uh-oh the boss wants to open source everything*
 
