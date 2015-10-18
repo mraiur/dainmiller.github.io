@@ -8,13 +8,13 @@ summary: Don't allow permissions to mix with app state.
 ---
 ------ 
 
-## Scenario:
+### Scenario
 
 We run a youtube production company and we make videos for paying members.
 Paying members can likewise access paid for premium content, and guests can access free content.
 Pretty straight forward.
 
-## Occurrence:
+### Occurrence
 
 We decide, one day, to open source all of our content. All videos, text posts, tutorials, etc
 are now available to *all* users.
