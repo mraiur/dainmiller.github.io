@@ -57,9 +57,7 @@ module Utilities
     INACTIVE = {}
 
     def self.active? client_id
-      # Using one of ruby's Enumerable module methods that returns
-      # true if the block never returns false.
-      ACTIVE.all?  { |id| client_id == id }
+      ACTIVE.any? { |id| client_id == id }
     end
   end
 end
