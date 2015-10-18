@@ -39,7 +39,7 @@ module Utilities
 end
 {% endhighlight %}
 
-That one was super simple. It just provided us a convenient way to lookup different
+These are super simple. It just provided us a convenient way to lookup different
 sorting paradigms. And you might think this is overkill, but when you have multiple developers
 typing raw strings into complex methods you will very much wish you had an abstraction that allowed
 them to *not* make a typo. Also, you could test these technically.
