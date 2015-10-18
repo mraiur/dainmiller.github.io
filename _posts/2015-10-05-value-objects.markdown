@@ -6,13 +6,17 @@ tags: [ruby, patterns]
 categories: [ruby]
 summary: How to use and work with a core OO paradigm.
 ---
-Tenants of value objects:
+
+Value objects are super interesting. To me, a value object is something we can use
+to either wrap up values or ask questions on objects - though sometimes that is confused with
+a "Query Object". In my mind they are almost interchangable. 
+
+My tenants of value objects:
 
 1. A value object never changes the state of your application
+2. A value object presents data and allows you to ask questions of the data
 
-2. A value object presents data and allows you to pose questions to the data
-
-Some only provide the data, and convenient lookups
+Here's an example of what a few might look like.
 
 {% highlight ruby %}
 module Utilities
@@ -24,10 +28,26 @@ module Utilities
       descending: DESC
     }
   end
+  class HttpStatusCodes
+    # Anytime we use a new code, add it to hash.
+    CODES = {
+      ok: 200,
+      created: 201,
+      temporary_redirect: 307,
+      bad_request: 400,
+      unauthorized: 401,
+      request_timeout: 408
+    }
+  end
 end
 {% endhighlight %}
 
-Others allow you to query data in a more advanced fashion.
+That one was super simple. It just provided us a convenient way to lookup different
+sorting paradigms. And you might think this is overkill, but when you have multiple developers
+typing raw strings into complex methods you will very much wish you had an abstraction that allowed
+them to *not* make a typo. Also, you could test these technically.
+
+Here's an example of one that follows tenant #2. 
 
 {% highlight ruby %}
 module Utilities
@@ -48,17 +68,10 @@ module Utilities
   end
 end
 
-module Utilities
-  class HttpStatusCodes
-    # Anytime we use a new code, add it to hash.
-    CODES = {
-      ok: 200,
-      created: 201,
-      temporary_redirect: 307,
-      bad_request: 400,
-      unauthorized: 401,
-      request_timeout: 408
-    }
-  end
-end
 {% endhighlight %}
+
+As you can see in the above example here we aren't only providing the data in a nice wrapped up 
+abstraction, we are also allowing objects outside of this class to ask questions of this data. 
+
+This is where we get the real power in value objects. As system complexity grows, this can really reduce a lot
+of cognitive overhead. You shouldn't ever have to think "Oh shoot, what is this string representing".
