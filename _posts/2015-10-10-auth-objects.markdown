@@ -21,7 +21,7 @@ are now available to *all* users.
 
 What's an ptimal way to be able to ship this new business requirement?
 
-Well, an AuthorizationObject isn't the worst way to go.
+Well, an "Authorization Object" (aka Query Object) isn't the worst way to go.
 
 Here's an example of how we might use one here.
 
