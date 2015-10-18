@@ -57,10 +57,9 @@ module Utilities
     INACTIVE = {}
 
     def self.active? client_id
-      if client_id == ACTIVE[:beta] ||
-         client_id == ACTIVE[:alpha] ||
-         client_id == ACTIVE[:production_1]
-      end
+      # Using one of ruby's Enumerable module methods that returns
+      # true if the block never returns false.
+      ACTIVE.all?  { |id| client_id == id }
     end
   end
 end
