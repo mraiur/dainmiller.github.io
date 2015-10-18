@@ -19,7 +19,7 @@ Pretty straight forward.
 We decide, one day, to open source all of our content. All videos, text posts, tutorials, etc
 are now available to *all* users.
 
-What's an ptimal way to be able to ship this new business requirement?
+What's an optimal way to be able to ship this new business requirement?
 
 Well, an "Authorization Object" (aka Query Object) isn't the worst way to go.
 
