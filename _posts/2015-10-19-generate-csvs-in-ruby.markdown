@@ -1,6 +1,6 @@
 ---
 published: true
-title: Generate CSVs in Ruby
+title: CSV Generation in Ruby
 layout: post
 tags: [ruby, csv]
 categories: [ruby]
