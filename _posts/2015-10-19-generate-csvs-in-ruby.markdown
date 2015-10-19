@@ -2,6 +2,9 @@
 published: true
 title: Generate CSVs in Ruby
 layout: post
+tags: [ruby, csv]
+categories: [ruby]
+summary: The beauty of CSV.generate.
 ---
 Did you know can convert a simple ruby hash to a CSV pretty painlessly? 
 
