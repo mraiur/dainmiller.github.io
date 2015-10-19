@@ -11,7 +11,18 @@ Did you know can convert a simple ruby hash to a CSV pretty painlessly?
 Here's an example:
 
 {% highlight ruby %}
-example = [{ one: 1, two: 2, three: 3, four: 4 },{ five: 5, six: 6, seven: 7, eight: 8 }]
+example = [{ 
+    one: 1, 
+    two: 2, 
+    three: 3, 
+    four: 4 
+  }, { 
+    five: 5, 
+    six: 6, 
+    seven: 7, 
+    eight: 8 
+  }
+]
 headers = [ 'Word', 'Integer' ]
 
 CSV.generate do |csv|
