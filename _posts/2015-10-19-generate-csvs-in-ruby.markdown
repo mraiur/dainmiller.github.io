@@ -1,10 +1,10 @@
 ---
 published: true
-title: CSV Generation with Ruby
+title: CSV Generation: Code Golf?
 layout: post
 tags: [ruby, csv]
 categories: [ruby]
-summary: The beauty of CSV.generate.
+summary: Creating a CSV with Ruby is incredibly simple.
 ---
 Did you know can convert a simple ruby hash to a CSV pretty painlessly? 
 
