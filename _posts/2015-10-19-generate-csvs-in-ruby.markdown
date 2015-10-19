@@ -1,6 +1,6 @@
 ---
 published: true
-title: CSV Generation: Code Golf?
+title: Ruby's CSV Generation
 layout: post
 tags: [ruby, csv]
 categories: [ruby]
