@@ -17,6 +17,6 @@ CSV.generate do |csv|
     csv << obj.values
   end
 end
-{% highlightend %}
+{% endhighlight %}
 
 Andddd, you're done. Works like magic. 
