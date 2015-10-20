@@ -1,0 +1,13 @@
+---
+published: true
+title: Example
+layout: post
+---
+{% highlight ruby %}
+  class Foo
+    def initialize bar, baz
+      @bar = bar
+      @baz = baz
+    end
+  end
+{% endhighlight %}
