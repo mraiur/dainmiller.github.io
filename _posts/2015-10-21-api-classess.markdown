@@ -1,9 +1,9 @@
 ---
 published: true
-title: API Interaction Classes
-tags: [ruby, api]
-summary: API connection and data transmutation step by step.
+title: API Classes
 layout: post
+tags: [ruby, api]
+summary: API connection and data transmutation examples.
 ---
 Example code today, that's it. 
 
