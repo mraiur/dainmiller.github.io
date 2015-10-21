@@ -1,8 +1,12 @@
 ---
 published: true
-title: Test
+title: API Interaction Classes
 layout: post
 ---
+Example code today, that's it. 
+
+This was mostly taken from an amazing talk, and is not all my code. I will link the talk when I can find it.
+
 {% highlight ruby %}
 class Connection
   include HTTParty
