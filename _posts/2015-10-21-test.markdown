@@ -20,57 +20,59 @@ class Connection
   end	
 end
 
+# Implementation
 connection = Connection.new(api_version: "1")
 connection.query(key: "test")
 
 class Client
-	def initialize options = {}
-		@connection = options.fetch(:connection)
-		@routes = options.fetch(:routes)
-	end
+  def initialize options = {}
+    @connection = options.fetch(:connection)
+    @routes = options.fetch(:routes)
+  end
 	
-	def method_missing method
-		route_map = routes.fetch(method)
-		http_method = route_map.fetch(:method)
-		relative_path = route_map.fetch(:path)
-		
-		@connection.send(http_method, relative_path)
-	end
+  def method_missing method
+    route_map = routes.fetch(method)
+    http_method = route_map.fetch(:method)
+    relative_path = route_map.fetch(:path)	
+	
+    @connection.send(http_method, relative_path)
+  end
 end
 	
 routes = {
-	route: {
-		method: 'get',
-		path: '/route'
-	}
+  route: {
+    method: 'get',
+    path: '/route'
+  }
 }
 
+# Implementation
 client = Client.new(connection: connnection, routes: routes)
 
 class Representation < OpenStruct
-	attr_reader :parent, :children
+  attr_reader :parent, :children
 	
-	def init rep = {}, parent = nil
-		super rep
-		@parent = parent
-		@children = []
-		bind parent
-		represent children
-	end
+  def init rep = {}, parent = nil
+    super rep
+    @parent = parent
+    @children = []
+    bind parent
+    represent children
+  end
 	
-	def represent type, collection, parent=nil
-		collection = Array(collection)
-		collection.map do |item|
-			definition_class = definition_class_for type
-			definition_class.new item, parent
-		end
-	end
+  def represent type, collection, parent=nil
+    collection = Array(collection)
+    collection.map do |item|
+      definition_class = definition_class_for type
+      definition_class.new item, parent
+    end
+  end
 	
-	def definition_class_for type
-		definition_class = type.to_s.constantize
-		Object.const_get definition_class
-	rescue NameError
-		Object.const_set definition_class, Representation
-	end
+  def definition_class_for type
+    definition_class = type.to_s.constantize
+    Object.const_get definition_class
+  rescue NameError
+    Object.const_set definition_class, Representation
+  end
 end
 {% endhighlight %}
