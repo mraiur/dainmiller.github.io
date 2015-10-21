@@ -5,20 +5,19 @@ layout: post
 ---
 {% highlight ruby %}
 class Connection
- 	include HTTParty
-	DEFAULT_VERSION = "1"
-	DEFAULT_BASE_URI = "api_base_url_here"
-	DEFAULT_QUERY = {}
+  include HTTParty
+  DEFAULT_VERSION = "1"
+  DEFAULT_BASE_URI = "api_base_url_here"
+  DEFAULT_QUERY = {}
 	
-	def initialize options = {}
-		@api_version = options.fetch(:api_version, DEFAULT_API_VERSION)
-		@query = options.fetch(:query, DEFAULT_QUERY)
-	end
+  def initialize options = {}
+    @api_version = options.fetch(:api_version, DEFAULT_API_VERSION)
+    @query = options.fetch(:query, DEFAULT_QUERY)
+  end
 	
-	def query params = {}
-		@query.update(params)
-	end
-	
+  def query params = {}
+    @query.update(params)
+  end	
 end
 
 connection = Connection.new(api_version: "1")
