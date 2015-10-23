@@ -3,6 +3,7 @@ published: true
 title: Using S3 in Ruby
 layout: post
 tags: [ruby, aws]
+summary: A simple way to interface with AWS's S3.
 ---
 I wrote an incredibly simple S3Importer class in Ruby today using the AWS-SDK v2.0 gem. It seemed useful, so I thought I'd share. 
 
