@@ -2,6 +2,8 @@
 published: true
 title: Monadic Refactoring
 layout: post
+tags: [ruby, monads]
+summary: A functional interface for API polling.
 ---
 A monad is a sequence of steps or wrapped nested functions of the same type. They are very interesting, and valuable in computer science. In fact, the entire Universe is technically monadic, which is interesting to ponder. 
 
