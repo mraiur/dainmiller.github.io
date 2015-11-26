@@ -1,6 +1,0 @@
----
-published: true
-title: finance
-layout: post
----
-Post Title\n\nSomething interesting here.\n\nvar code = new SomeCode()\n\nTesting more test.
