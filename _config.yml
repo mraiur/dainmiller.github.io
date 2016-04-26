@@ -1,7 +1,5 @@
 excerpt_separator: ""
-pygments: true
-markdown: kramdown
-url: http://cdainmiller.github.io
+url: http://dainmiller.github.io
 title: Ctrl-Dev
 email: miller.dain@gmail.com
 author: Dain Miller
