@@ -2,8 +2,8 @@
 published: true
 title: Testing JSON APIs
 layout: post
-tags: [ruby, json]
-categories: [ruby, json]
+tags: [ruby, json, api]
+categories: [ruby, json, api]
 summary: JSON API Utilities
 ---
 Hey guys,
