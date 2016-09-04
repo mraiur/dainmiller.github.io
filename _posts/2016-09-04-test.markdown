@@ -1,6 +1,10 @@
 ---
 published: true
-title: Test
+title: Elixir Testing
 layout: post
 ---
 Test
+
+```
+thing
+```
