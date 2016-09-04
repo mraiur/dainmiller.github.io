@@ -5,7 +5,7 @@ layout: post
 ---
 Test
 
-```javascript
+```js
 ExUnit.new
 
 thing = Test.new()
