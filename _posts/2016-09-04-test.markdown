@@ -5,8 +5,8 @@ layout: post
 ---
 Test
 
-```js
-ExUnit.new
+```ruby
+new thing()
 
 thing = Test.new()
 ```
