@@ -5,7 +5,7 @@ layout: post
 ---
 Test
 
-```ruby
+```js
 new thing()
 
 thing = Test.new()
