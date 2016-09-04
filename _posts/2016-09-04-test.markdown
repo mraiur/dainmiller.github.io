@@ -6,5 +6,7 @@ layout: post
 Test
 
 ```
-thing
+ExUnit.new
+
+thing = Test.new()
 ```
