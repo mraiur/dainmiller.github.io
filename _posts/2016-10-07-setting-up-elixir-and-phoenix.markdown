@@ -29,29 +29,29 @@ Now let's walk through the *painless* process to launch a new
    know by now in 2016, package managers installing package managers installing
    package managers has become common place - however meta it may be.
 
-  ```elixir
-  mix local.hex
-  ```
+   ```elixir
+    mix local.hex
+    ```
 
 2. Next we have to install the "Phoenix" zip file (latest version) and let it
    build itself so that you can launch phoenix apps through `mix`.
 
-  ```elixir
-  mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
-  ```
+   ```elixir
+    mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
+    ```
 
 3. We can test our Elixir and Phoenix install process by running the following
    command to build a blank app.
 
-   {% highlight elixir %}
+   ```elixir
    mix phoenix.new web --no-brunch --no-ecto
-   {% endhighlight %}
+   ```
 
 Success! 2 steps. Can you believe it?
 
 ## Elixir & Phoenix Packages You Need to Know 
 
-Here are the things you need to know:
+#### Here are the things you need to know:
 
 - `ecto` is the ORM for Elixir. Similar to `ActiveRecord` in Rails.
 - `mix` is the package manager for Elixir. Similar to `gem install` via
