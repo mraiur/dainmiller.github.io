@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 published: true
 title: Setting Up Elixir & Phoenix
