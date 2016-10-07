@@ -6,7 +6,6 @@ tags: [ruby]
 categories: [ruby]
 summary: Don't allow permissions to mix with app state.
 ---
------- 
 
 ### Scenario
 
