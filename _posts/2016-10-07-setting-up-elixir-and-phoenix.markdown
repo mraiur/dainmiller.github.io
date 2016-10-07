@@ -2,7 +2,7 @@
 published: true
 title: Setting Up Elixir & Phoenix
 layout: post
-tags: [elixir phoenix]
+tags: [elixir, phoenix]
 categories: [elixir]
 summary: Up and running with the hotness.
 ---
@@ -30,14 +30,15 @@ Now let's walk through the *painless* process to launch a new
    package managers has become common place - however meta it may be.
 
    ```elixir
-    mix local.hex
+   mix local.hex
     ```
 
 2. Next we have to install the "Phoenix" zip file (latest version) and let it
    build itself so that you can launch phoenix apps through `mix`.
 
    ```elixir
-    mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
+   mix archive.install
+   https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez
     ```
 
 3. We can test our Elixir and Phoenix install process by running the following
