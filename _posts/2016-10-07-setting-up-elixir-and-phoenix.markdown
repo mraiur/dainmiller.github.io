@@ -2,11 +2,9 @@
 published: true
 title: Setting Up Elixir & Phoenix
 layout: post
-tags: [elixir phoenix]
+tags: [elixir, phoenix]
 categories: [elixir]
-summary: Up and running with the hotness.
 ---
-
 Elixir and Phoenix. You know them, you want to learn them more.
 
 Let me help.
@@ -60,5 +58,3 @@ Here are the things you need to know:
     in Rails.
 - `postgres` support comes built in from the beginning when you boot a Phoenix
     app.
-
-
