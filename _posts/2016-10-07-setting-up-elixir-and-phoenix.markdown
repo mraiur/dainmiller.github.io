@@ -51,13 +51,15 @@ mix phoenix.new web --no-brunch --no-ecto
 Success! 2 steps. Can you believe it?
 
 ## Elixir & Phoenix Core Packages 
-
+<br />
 Here are the things you need to know:
 
-- `ecto` is the ORM for Elixir. Similar to `ActiveRecord` in Rails.
-- `mix` is the package manager for Elixir. Similar to `gem install` via
-    Rubygems.
-- `exunit` is the commonly used testing framework for Elixir. Similar to `rspec`
-    in Rails.
-- `postgres` support comes built in from the beginning when you boot a Phoenix
-    app.
+[ecto](http://www.phoenixframework.org/docs/ecto-models) is the ORM for Elixir, similar to
+[ActiveRecord](http://guides.rubyonrails.org/active_record_basics.html) for Rails.
+
+[mix](http://elixir-lang.org/getting-started/mix-otp/introduction-to-mix.html) is the package manager for Elixir. Similar to `gem install` via
+[Rubygems](https://rubygems.org/).
+
+[exunit](http://elixir-lang.org/docs/stable/ex_unit/ExUnit.html) is the commonly used testing framework for Elixir. Similar to `rspec` in Rails.
+
+[postgres](https://www.postgresql.org/) support comes built in from the beginning when you boot a Phoenix app.
