@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 published: true
 title: Setting Up Elixir & Phoenix
@@ -60,5 +61,3 @@ Here are the things you need to know:
     in Rails.
 - `postgres` support comes built in from the beginning when you boot a Phoenix
     app.
-
-
