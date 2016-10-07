@@ -43,9 +43,9 @@ Now let's walk through the *painless* process to launch a new
 3. We can test our Elixir and Phoenix install process by running the following
    command to build a blank app.
 
-   ```elixir
+   {% highlight elixir %}
    mix phoenix.new web --no-brunch --no-ecto
-   ```
+   {% endhighlight %}
 
 Success! 2 steps. Can you believe it?
 
