@@ -1,6 +1,6 @@
 ---
 published: true
-title: Login Issues in Virtualized Linux
+title: Login Issues in Linux
 layout: post
 tags: [linux, ubuntu, bugs]
 categories: [linux]
