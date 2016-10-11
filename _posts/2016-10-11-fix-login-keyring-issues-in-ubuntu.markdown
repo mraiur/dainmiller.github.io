@@ -1,6 +1,6 @@
 ---
 published: true
-title: Fixing Login & Keyring Issues in Virtualized Ubuntu
+title: Login Issues in Virtualized Linux
 layout: post
 tags: [linux, ubuntu, bugs]
 categories: [linux]
