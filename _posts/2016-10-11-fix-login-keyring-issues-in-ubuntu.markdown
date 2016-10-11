@@ -1,7 +1,10 @@
 ---
 published: true
-title: Fix Login & Keyring Issues in Ubuntu
+title: Fixing Login & Keyring Issues in Virtualized Ubuntu
 layout: post
+tags: [linux, ubuntu, bugs]
+categories: [linux]
+summary: The nuke-it option is not secure, but it's certainly easier. 😍
 ---
 I know this isn't an ideal fix, but my gosh this is an annoying issue.
 
