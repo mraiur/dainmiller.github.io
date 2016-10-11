@@ -16,18 +16,18 @@ What this means is you're allowed to login to certain things, because your login
 
 For instance, if you try to create user accounts or do other admin actions that prompt Ubuntu password popup, those will all fail if your login wasn't persisted correctly.
 
-To fix this I chose the nuke it option:
+**To fix this I chose the nuke it option:**
 
-1. Hit cmd or windw btn
+Hit cmd or windw btn
 
-2. Type password, hit down arrow, hit enter on _Passwords and Keys_
+Type password, hit down arrow, hit enter on _Passwords and Keys_
 
-3. Click login, click green plus button on top left of window.
+Click login, click green plus button on top left of window.
 
-4. Click password keyring and continue
+Click password keyring and continue
 
-5. Name it whatever
+Name it whatever
 
-6. Set password to empty on both and hit submit.
+Set password to empty on both and hit submit.
 
 All done, issue fixed. 
