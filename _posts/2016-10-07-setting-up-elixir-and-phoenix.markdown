@@ -4,7 +4,7 @@ title: Setting Up Elixir & Phoenix
 layout: post
 tags: [elixir, phoenix]
 categories: [elixir]
-summary: Up and running with the hotness.
+summary: Up and running with the new hotness.
 ---
 
 Elixir and Phoenix. You know them, you want to learn them more.
