@@ -23,6 +23,9 @@ As a result of that, you'll use `hanna /path/to/folders/*.rb` to generate your t
 
 Anytime you get stuck, `rm -rf doc` and regenerate your docs.
 
+Here's what good RDOC looks like when you generate it:
+![/dainmiller/dainmiller.github.io/blob/master/docs.png?raw=true]()
+
 That's it for now. 
 
 Toodles.
