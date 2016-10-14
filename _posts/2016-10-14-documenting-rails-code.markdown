@@ -21,4 +21,8 @@ Don't use the default RDOC theme. Instead, use [this one](https://github.com/mis
 
 As a result of that, you'll use `hanna /path/to/folders/*.rb` to generate your tests.
 
-Anytime you get stuck, `rm -rf doc` and regenerate your docs.,
+Anytime you get stuck, `rm -rf doc` and regenerate your docs.
+
+That's it for now. 
+
+Toodles.
