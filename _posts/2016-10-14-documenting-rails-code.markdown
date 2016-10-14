@@ -4,7 +4,7 @@ title: Documenting Rails Code
 layout: post
 tags: [rails, docs]
 categories: [rails]
-summary: RDOC is great, but HANNA is better.
+summary: RDOC is great, and HANNA makes it better.
 ---
 
 Notes on how I document Rails code:
