@@ -1,5 +1,5 @@
 ---
 published: false
-title: Post Idea
+title: Polymorphic Abstractions in Ruby
 layout: post
 ---
