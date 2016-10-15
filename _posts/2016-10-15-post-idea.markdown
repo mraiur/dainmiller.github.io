@@ -3,3 +3,4 @@ published: false
 title: Polymorphic Abstractions in Ruby
 layout: post
 ---
+Here talk about all my shit I'm working on with `AdFreeContent` and `Content` and the polymorphic `all`.
