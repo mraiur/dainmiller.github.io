@@ -1,12 +1,11 @@
 ---
 published: true
-title: Installing Rails 5
+title: Installing Specific Rails Versions
 layout: post
 ---
-Use [this version of Rails](https://rubygems.org/gems/rails/versions/5.0.0)
-
-Use this command:
+Did you know you can use this? 
 
 ```ruby
 gem install rails --version=5.0.0
 ```
+
